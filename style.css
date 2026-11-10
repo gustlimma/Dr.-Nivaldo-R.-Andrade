@@ -298,3 +298,38 @@ body{background:var(--bg);color:#fff}
 
 /* Hero: nome e registro em destaque (4x o tamanho original de 1rem) */
 .hero__kicker{font-size:clamp(2rem,6vw,4rem);line-height:1.1;margin-bottom:20px}
+
+/* ===== Cards de especialidades com foto (IMG/servico1.jpg ... servico10.jpg) ===== */
+.grid{display:flex;flex-wrap:wrap;justify-content:center}
+.card{flex:0 1 calc((100% - 72px) / 4);overflow:hidden;padding:0 24px 30px}
+.card__img{position:relative;aspect-ratio:3/2;margin:0 -24px 22px;background:var(--bg2);border-bottom:1px solid var(--line);overflow:hidden}
+.card__img img{position:relative;z-index:1;width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+.card:hover .card__img img{transform:scale(1.06)}
+.card__img.is-empty img{display:none}
+@media(max-width:1100px){.card{flex-basis:calc((100% - 24px) / 2)}}
+@media(max-width:600px){.card{flex-basis:100%}}
+
+/* ===== Galeria de trabalhos por especialidade ===== */
+.card__img{cursor:pointer}
+.more[data-open]{background:none;border:0;padding:0;font:700 1rem var(--sans);cursor:pointer}
+.more[data-open]:hover{color:#fff}
+.svc{position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.88);display:flex;align-items:center;justify-content:center;padding:20px;animation:lbIn .25s var(--ease)}
+.svc[hidden]{display:none}
+.svc__box{position:relative;width:min(860px,100%);max-height:94vh;overflow:auto;background:var(--bg2);border:1px solid var(--gold);border-radius:var(--radius);padding:32px;animation:lbZoom .3s var(--ease)}
+.svc__box h3{font-family:var(--serif);font-weight:600;font-size:1.6rem;color:var(--gold-l);padding-right:50px}
+.svc__box p{color:var(--gray);margin:6px 0 20px;font-size:.95rem}
+.svc__x{position:absolute;top:14px;right:14px;width:42px;height:42px;border:0;border-radius:50%;background:rgba(255,255,255,.12);color:#fff;font-size:1.8rem;line-height:1;cursor:pointer}
+.svc__x:hover{background:var(--gold);color:var(--bg)}
+.svc__stage{position:relative;aspect-ratio:3/2;background:var(--bg);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.svc__stage img{width:100%;height:100%;object-fit:contain}
+.svc__ph{position:absolute;inset:0;display:none;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:var(--gold);font-weight:700}
+.svc__ph svg{width:44px;height:44px;opacity:.6}
+.svc__nav{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border:0;border-radius:50%;background:rgba(0,0,0,.55);color:#fff;font-size:2rem;line-height:1;cursor:pointer;z-index:2}
+.svc__nav:hover{background:var(--gold);color:var(--bg)}
+.svc__nav--prev{left:12px}.svc__nav--next{right:12px}
+.svc__thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:14px 0 22px}
+.svc__thumbs button{aspect-ratio:3/2;padding:0;border:2px solid transparent;border-radius:10px;overflow:hidden;background:var(--bg);color:var(--gold);font:700 .8rem var(--sans);cursor:pointer;opacity:.65;transition:opacity .2s,border-color .2s}
+.svc__thumbs button.empty{border:1px dashed var(--line)}
+.svc__thumbs button.on,.svc__thumbs button:hover{opacity:1;border-color:var(--gold)}
+.svc__thumbs img{width:100%;height:100%;object-fit:cover}
+@media(max-width:600px){.svc__box{padding:22px 16px}.svc__cta{width:100%}}

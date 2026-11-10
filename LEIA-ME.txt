@@ -1,0 +1,14 @@
+Fotos da galeria de cada especialidade (até 4 por serviço).
+
+1  Implantes dentários: servico1-1.jpg ... servico1-4.jpg
+2  Reconstrução protética: servico2-1.jpg ... servico2-4.jpg
+3  Periodontia: servico3-1.jpg ... servico3-4.jpg
+4  Clareamento dental: servico4-1.jpg ... servico4-4.jpg
+5  Restaurações estéticas: servico5-1.jpg ... servico5-4.jpg
+6  Cirurgias de dentes inclusos: servico6-1.jpg ... servico6-4.jpg
+7  Ortodontia: servico7-1.jpg ... servico7-4.jpg
+8  Facetas dentárias: servico8-1.jpg ... servico8-4.jpg
+9  Harmonização facial: servico9-1.jpg ... servico9-4.jpg
+10 Tratamento de canal: servico10-1.jpg ... servico10-4.jpg
+
+A foto de capa de cada card continua na pasta IMG (servico1.jpg ... servico10.jpg).
